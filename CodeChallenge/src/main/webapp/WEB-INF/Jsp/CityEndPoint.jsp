@@ -16,8 +16,7 @@
 		</div>
 		<div>
 			<font color="Green">
-				<h4>${Message}
-					<h4>
+				<h4>${Message}<h4>
 			</font>
 		</div>
 		</form>

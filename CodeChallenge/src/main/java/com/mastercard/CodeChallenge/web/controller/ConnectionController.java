@@ -8,23 +8,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mastercard.CodeChallenge.web.service.RouteFinderService;
-
 @Controller
 public class ConnectionController {
 	@Autowired
 	RouteFinderService routefinder;
-
-	@RequestMapping(value = "/connected", method = RequestMethod.GET)
-	public String connect() {
-		// this will redirect to ConnectCities.jsp page
-		return "ConnectCities";
-	}
 	
 	@RequestMapping(value = "/connected", method = RequestMethod.GET)
 	public String connect(@RequestParam(value = "origin") String origin,
-						  @RequestParam(value = "destination") String destination, 
-						  ModelMap model) 
-	{
+						  		@RequestParam(value = "destination") String destination, 
+						  		ModelMap model) {
 		System.out.println("User Input - Origin =" + origin + ", Destination =" + destination);
 
 		// pass the user input and check if there exist a route.
@@ -36,6 +28,6 @@ public class ConnectionController {
 		model.put("destination", destination);
 		model.put("Message", validRoute);
 
-		return "ConnectCities";
-	}	
+		return "CityEndPoint";
+	}
 }

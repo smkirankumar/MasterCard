@@ -1,4 +1,4 @@
-package com.mastercard.CodeChallenge;
+package com.mastercard.CodeChallenge.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
